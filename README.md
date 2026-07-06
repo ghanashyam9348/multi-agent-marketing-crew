@@ -91,3 +91,38 @@ Examples include:
 - The current LLM configuration in `crew.py` uses `openai/gpt-4o-mini`.
 - Rate-limits are controlled with `max_rpm` and task `max_iter` settings.
 - Some task expectations reference `resources/drafts/blogs/`; make sure this folder exists before production runs.
+
+
+## Short Demo
+
+### 1) Set up environment
+
+```bash
+pip install -r requirements.txt
+```
+
+Create a `.env` file:
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+SERPER_API_KEY=your_serper_api_key
+```
+
+### 2) Run the crew
+
+```bash
+python crew.py
+```
+
+### 3) Check generated outputs
+
+After execution, review generated files in:
+
+- `resources/drafts/marketing_strategy.md`
+- `resources/drafts/content_calendar.md`
+- `resources/drafts/posts/`
+- `resources/drafts/reels/`
+
+### 4) Customize for your use case
+
+Edit the `inputs` dictionary in `crew.py` to change product, audience, budget, and campaign context.
